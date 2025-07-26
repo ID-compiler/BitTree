@@ -1,4 +1,7 @@
 @import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap'); */
+
+
 
 :root {
   --background: #ffffff;
@@ -23,4 +26,111 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+
+@media (min-height: 640px) {
+  .shorter_dp {
+    padding-top: 110px;
+  }
+}
+
+/* Add to your global CSS file */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fade-slide-in {
+  animation: fadeSlideIn 0.3s ease;
+}
+
+
+@media (min-width: 1024px) and (max-width: 1198px) {
+  .move-left-to-zero {
+    left: -29vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+@media (min-width: 1163px) and (max-width: 1399px) {
+  .move-left-to-zero {
+    left: -21vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+
+@media (min-width: 1393px) {
+  .move-left-to-zero {
+    position: absolute;
+    left: clamp(-19vw, calc((100vw - 1198px) / (3100 - 1198) * 19vw - 19vw), 0);
+    transition: left 0.4s ease-in-out;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1170px) {
+  .Lesson_move-left-to-zero {
+    left: -48vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+@media (min-width: 1170px) and (max-width: 1270px) {
+  .Lesson_move-left-to-zero {
+    position: absolute;
+    left: -35vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+@media (min-width: 1270px) and (max-width: 1399px) {
+  .Lesson_move-left-to-zero {
+    left: -25vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1540px) {
+  .Lesson_move-left-to-zero {
+    left: -15vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+@media (min-width: 1540px)  {
+  .Lesson_move-left-to-zero {
+    left: -5vw !important;
+    transition: left 0.4s ease-in-out;
+  }
+}
+
+/* Custom classy thin white scrollbar for .form-scrollbar */
+.form-scrollbar::-webkit-scrollbar {
+  width: 2px;
+  background: transparent;
+}
+.form-scrollbar::-webkit-scrollbar-thumb {
+  background: #ddbddd;
+  border-radius: 8px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.form-scrollbar::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5;
+}
+.form-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.form-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #ddb3dd transparent;
 }

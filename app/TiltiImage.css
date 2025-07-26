@@ -1,0 +1,11 @@
+.tilt-container {
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.tilt-image {
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  padding-top: 90px;
+  max-width: 600px;
+}
