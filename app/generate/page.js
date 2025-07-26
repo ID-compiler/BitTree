@@ -46,7 +46,7 @@ const Generate = () => {
     };
 
     try {
-      const r = await fetch("http://localhost:3000/api/add", requestOptions);
+      const r = await fetch("https://bittree-psi.vercel.app/api/add", requestOptions);
       const result = await r.json();
 
       if (result.success) {
